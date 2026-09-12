@@ -1,0 +1,160 @@
+================================================================================
+  UNIVERSIDAD JOSÉ ANTONIO PÁEZ (UJAP)
+  FACULTAD DE INGENIERÍA - ESCUELA DE INGENIERÍA EN COMPUTACIÓN
+  PARCIAL III: SIMULACIÓN - TRABAJO PRÁCTICO (POO & INTELIGENCIA ARTIFICIAL)
+================================================================================
+ Fecha y Hora de Generación: 11/09/2026 20:09:30
+ Módulo Evaluado: Simulación de Eventos Discretos: Fábrica de Laptops
+ Archivo Destino: reporte_simulacion_parcial3.txt
+================================================================================
+
+--------------------------------------------------------------------------------
+1. RESUMEN DE PARÁMETROS Y CONFIGURACIÓN INICIAL
+--------------------------------------------------------------------------------
+  * Problema                           : Simulación de Eventos Discretos (Fábrica de Laptops)
+  * Duracion horas                     : Infinito
+  * Tiempo simulado min                : 579.12
+  * Tasa llegada lambda h              : 10.0
+  * Tiempo servicio medio min          : 5.0
+  * Umbral inventario                  : 10
+  * Tamano lote                        : 50
+  * Tiempo entrega proveedor min       : 15.0
+  * Total ordenes arribadas            : 100
+  * Total ordenes completadas          : 94
+  * Ordenes en cola final              : 4
+  * Tiempo espera promedio min         : 7.89
+  * Tiempo espera promedio horas       : 0.1315
+  * Tiempo sistema promedio min        : 12.61
+  * Tiempo espera maximo min           : 34.75
+  * Tiempo promedio despacho lote min  : 293.47
+  * Tiempo promedio despacho lote horas: 4.89
+  * Tiempo promedio ciclo lote min     : 293.47
+  * Lotes solicitados                  : 2
+  * Lotes despachados completos        : 1
+  * Numero detenciones linea           : 0
+  * Tiempo total detencion min         : 0.0
+  * Porcentaje tiempo detenido         : 0.0
+  * Ordenes retrasadas por stock       : 0
+  * Porcentaje ordenes retrasadas      : 0.0
+  * Eficiencia reabastecimiento pct    : 100.0
+  * Disponibilidad stock pct           : 100.0
+  * Utilizacion estacion pct           : 77.14
+  * Stock final procesadores           : 55
+  * Total trazas generadas             : 293
+
+--------------------------------------------------------------------------------
+2. MUESTRA CRONOLÓGICA DE TRAZAS DEL SISTEMA (EVENTOS / MUESTREOS REGISTRADOS)
+--------------------------------------------------------------------------------
+  [Mostrando primeras 25 trazas de un total de 674 registradas]
+  [00:00:00] | Evento: INICIO_SIMULACION    | Estado: LIBRE              | Cola:   0 | Stock:  50 | Fábrica inicia simulación por infh (inf min). Stock inicial: 50 procesadores.
+  [00:14:25] | Evento: LLEGADA_ORDEN        | Estado: LIBRE              | Cola:   1 | Stock:  50 | Orden #1 recibida. Cola: 1.
+  [00:14:25] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  49 | Iniciando ensamble Orden #1. Duración estimada: 11.92 min. Stock restante: 49.
+  [00:26:20] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   0 | Stock:  49 | Orden #1 ensamblada. Tiempo: 11.92 min.
+  [00:28:26] | Evento: LLEGADA_ORDEN        | Estado: LIBRE              | Cola:   1 | Stock:  49 | Orden #2 recibida. Cola: 1.
+  [00:28:26] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  48 | Iniciando ensamble Orden #2. Duración estimada: 0.43 min. Stock restante: 48.
+  [00:28:52] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   0 | Stock:  48 | Orden #2 ensamblada. Tiempo: 0.43 min.
+  [00:30:07] | Evento: LLEGADA_ORDEN        | Estado: LIBRE              | Cola:   1 | Stock:  48 | Orden #3 recibida. Cola: 1.
+  [00:30:07] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  47 | Iniciando ensamble Orden #3. Duración estimada: 7.05 min. Stock restante: 47.
+  [00:37:10] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   0 | Stock:  47 | Orden #3 ensamblada. Tiempo: 7.05 min.
+  [00:38:50] | Evento: LLEGADA_ORDEN        | Estado: LIBRE              | Cola:   1 | Stock:  47 | Orden #4 recibida. Cola: 1.
+  [00:38:50] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  46 | Iniciando ensamble Orden #4. Duración estimada: 0.40 min. Stock restante: 46.
+  [00:39:14] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   0 | Stock:  46 | Orden #4 ensamblada. Tiempo: 0.40 min.
+  [00:57:34] | Evento: LLEGADA_ORDEN        | Estado: LIBRE              | Cola:   1 | Stock:  46 | Orden #5 recibida. Cola: 1.
+  [00:57:34] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  45 | Iniciando ensamble Orden #5. Duración estimada: 0.35 min. Stock restante: 45.
+  [00:57:56] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   0 | Stock:  45 | Orden #5 ensamblada. Tiempo: 0.35 min.
+  [01:03:51] | Evento: LLEGADA_ORDEN        | Estado: LIBRE              | Cola:   1 | Stock:  45 | Orden #6 recibida. Cola: 1.
+  [01:03:51] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  44 | Iniciando ensamble Orden #6. Duración estimada: 8.66 min. Stock restante: 44.
+  [01:10:23] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   1 | Stock:  44 | Orden #7 recibida. Cola: 1.
+  [01:12:31] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   1 | Stock:  44 | Orden #6 ensamblada. Tiempo: 8.66 min.
+  [01:12:31] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   0 | Stock:  43 | Iniciando ensamble Orden #7. Duración estimada: 6.16 min. Stock restante: 43.
+  [01:12:43] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   1 | Stock:  43 | Orden #8 recibida. Cola: 1.
+  [01:13:38] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   2 | Stock:  43 | Orden #9 recibida. Cola: 2.
+  [01:14:11] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   3 | Stock:  43 | Orden #10 recibida. Cola: 3.
+  [01:16:04] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   4 | Stock:  43 | Orden #11 recibida. Cola: 4.
+
+  ... [624 trazas intermedias omitidas en el reporte impreso] ...
+
+  [Mostrando últimas 25 trazas registradas]
+  [20:48:55] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   3 | Stock:  37 | Orden #216 recibida. Cola: 3.
+  [20:51:32] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   4 | Stock:  37 | Orden #217 recibida. Cola: 4.
+  [20:52:45] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   4 | Stock:  37 | Orden #213 ensamblada. Tiempo: 38.63 min.
+  [20:52:45] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   3 | Stock:  36 | Iniciando ensamble Orden #214. Duración estimada: 11.17 min. Stock restante: 36.
+  [20:54:21] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   4 | Stock:  36 | Orden #218 recibida. Cola: 4.
+  [21:03:55] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   4 | Stock:  36 | Orden #214 ensamblada. Tiempo: 40.43 min.
+  [21:03:55] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   3 | Stock:  35 | Iniciando ensamble Orden #215. Duración estimada: 5.85 min. Stock restante: 35.
+  [21:07:17] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   4 | Stock:  35 | Orden #219 recibida. Cola: 4.
+  [21:08:47] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   5 | Stock:  35 | Orden #220 recibida. Cola: 5.
+  [21:09:46] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   5 | Stock:  35 | Orden #215 ensamblada. Tiempo: 34.35 min.
+  [21:09:46] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   4 | Stock:  34 | Iniciando ensamble Orden #216. Duración estimada: 1.44 min. Stock restante: 34.
+  [21:11:12] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   4 | Stock:  34 | Orden #216 ensamblada. Tiempo: 22.28 min.
+  [21:11:12] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   3 | Stock:  33 | Iniciando ensamble Orden #217. Duración estimada: 7.42 min. Stock restante: 33.
+  [21:15:24] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   4 | Stock:  33 | Orden #221 recibida. Cola: 4.
+  [21:16:34] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   5 | Stock:  33 | Orden #222 recibida. Cola: 5.
+  [21:18:37] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   5 | Stock:  33 | Orden #217 ensamblada. Tiempo: 27.08 min.
+  [21:18:37] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   4 | Stock:  32 | Iniciando ensamble Orden #218. Duración estimada: 2.38 min. Stock restante: 32.
+  [21:21:00] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   4 | Stock:  32 | Orden #218 ensamblada. Tiempo: 26.65 min.
+  [21:21:00] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   3 | Stock:  31 | Iniciando ensamble Orden #219. Duración estimada: 0.47 min. Stock restante: 31.
+  [21:21:28] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   3 | Stock:  31 | Orden #219 ensamblada. Tiempo: 14.19 min.
+  [21:21:28] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   2 | Stock:  30 | Iniciando ensamble Orden #220. Duración estimada: 6.90 min. Stock restante: 30.
+  [21:23:40] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   3 | Stock:  30 | Orden #223 recibida. Cola: 3.
+  [21:24:26] | Evento: LLEGADA_ORDEN        | Estado: OCUPADA            | Cola:   4 | Stock:  30 | Orden #224 recibida. Cola: 4.
+  [21:28:22] | Evento: FIN_ENSAMBLE         | Estado: LIBRE              | Cola:   4 | Stock:  30 | Orden #220 ensamblada. Tiempo: 19.58 min.
+  [21:28:22] | Evento: INICIO_ENSAMBLE      | Estado: OCUPADA            | Cola:   3 | Stock:  29 | Iniciando ensamble Orden #221. Duración estimada: 3.29 min. Stock restante: 29.
+
+--------------------------------------------------------------------------------
+3. ANÁLISIS, CONCLUSIÓN Y RECOMENDACIONES DE INTELIGENCIA ARTIFICIAL
+--------------------------------------------------------------------------------
+======================================================================
+DICTAMEN DE INTELIGENCIA ARTIFICIAL (GOOGLE GEMINI - gemini-2.5-flash)
+======================================================================
+
+Estimados colegas y estudiantes de la UJAP,
+
+Procedo a realizar un análisis cuantitativo y crítico de los resultados de la simulación de "Simulación de Eventos Discretos: Fábrica de Laptops", aplicando los principios de la Simulación de Sistemas e Ingeniería en Computación.
+
+### 1. Conclusión General del Desempeño:
+
+El sistema de la fábrica de laptops, operando bajo los parámetros definidos, exhibe una **estabilidad operativa aceptable** en el corto plazo simulado (579.12 minutos). La capacidad de procesamiento de órdenes es robusta, evidenciada por un alto porcentaje de órdenes completadas (94%) y una eficiencia de reabastecimiento del 100%. Sin embargo, la presencia de órdenes en cola al final de la simulación (4 órdenes) y un tiempo de espera promedio no despreciable (7.89 minutos) sugieren que, a pesar de la aparente estabilidad, el sistema opera cerca de su capacidad o con variabilidad que genera acumulaciones temporales.
+
+**No se identifican cuellos de botella críticos en la estación de ensamble o en la disponibilidad de stock de procesadores** durante el período simulado. La utilización de la estación del 77.14% indica que la estación de ensamble está bien utilizada, pero aún tiene margen para absorber picos de demanda. La ausencia de detenciones de línea y órdenes retrasadas por stock refuerza esta conclusión.
+
+La **viabilidad operativa es alta** bajo las condiciones actuales, especialmente en lo que respecta a la gestión de inventario y la capacidad de respuesta a la demanda. El sistema logra mantener un flujo continuo de producción sin interrupciones significativas. No obstante, la métrica de "tiempo de sistema promedio" (12.61 minutos) y "tiempo de espera máximo" (34.75 minutos) indican que la experiencia del cliente puede variar considerablemente, y que algunas órdenes experimentan demoras sustanciales.
+
+### 2. Análisis Crítico:
+
+Los tiempos de espera, el inventario y la utilización de la estación se justifican de la siguiente manera:
+
+*   **Tiempos de Espera (Promedio 7.89 min, Máximo 34.75 min):**
+    *   **Justificación:** El tiempo de espera promedio de 7.89 minutos es una consecuencia directa de la interacción entre la tasa de llegada de órdenes ($\lambda = 10$ órdenes/hora, o aproximadamente 1 orden cada 6 minutos) y el tiempo de servicio medio (5.0 minutos). Aunque el tiempo de servicio es menor que el tiempo entre llegadas promedio, la variabilidad inherente en los procesos de llegada (generalmente modelados con una distribución exponencial) y de servicio (que también suele tener variabilidad) provoca que las órdenes no lleguen y se procesen de manera perfectamente espaciada. Esto genera acumulaciones temporales en la cola.
+    *   El **tiempo de espera máximo de 34.75 minutos** es un indicador clave de la variabilidad del sistema. Sugiere que, en algún momento, una orden llegó cuando la estación de ensamble estaba ocupada con varias órdenes consecutivas o con una orden de servicio prolongado, lo que resultó en una espera considerable. Este valor, aunque no es catastrófico, es significativamente mayor que el promedio y podría impactar la satisfacción del cliente para órdenes específicas.
+    *   La **utilización de la estación del 77.14%** es un factor contribuyente. Si la utilización fuera significativamente menor, los tiempos de espera serían menores. Si fuera mayor, los tiempos de espera se dispararían exponencialmente, acercándose a la saturación del sistema. Este valor indica un buen equilibrio entre eficiencia y capacidad de respuesta, pero con un costo en tiempos de espera para algunas órdenes.
+
+*   **Inventario (Stock final de procesadores: 55):**
+    *   **Justificación:** El sistema utiliza una política de reabastecimiento basada en un `umbral_inventario` de 10 unidades y un `tamano_lote` de 50 unidades. El `stock_final_procesadores` de 55 unidades, junto con la `disponibilidad_stock_pct` del 100% y `ordenes_retrasadas_por_stock` de 0, demuestra que la política de inventario es altamente efectiva para evitar desabastecimientos.
+    *   El sistema solicitó 2 lotes y despachó 1 lote completo. El `tiempo_entrega_proveedor_min` de 15.0 minutos es relativamente corto en comparación con el `tiempo_promedio_despacho_lote_min` (293.47 minutos), lo que permite que el reabastecimiento sea oportuno. La simulación muestra que el stock nunca cayó por debajo del umbral crítico de manera que afectara la producción. El stock inicial de 50 procesadores y la llegada de un lote adicional (aunque solo uno fue despachado completamente en el tiempo simulado) fueron suficientes para cubrir la demanda de 94 órdenes completadas.
+
+*   **Throttling / Detenciones de Línea:**
+    *   **Justificación:** Las métricas `numero_detenciones_linea` (0), `tiempo_total_detencion_min` (0.0) y `porcentaje_tiempo_detenido` (0.0%) indican que no hubo throttling ni detenciones de línea debido a fallas de equipo, falta de personal o cualquier otro factor interno. Esto sugiere que la estación de trabajo es robusta y confiable, o que el modelo de simulación no incluyó estos tipos de fallas. En un escenario real, la ausencia total de detenciones sería inusual y podría ser un área para refinar el modelo de simulación si se busca mayor realismo.
+
+### 3. Tres (3) Recomendaciones Automatizadas Puntuales y Cuantificadas para optimizar el sistema:
+
+Basado en el análisis cuantitativo, propongo las siguientes recomendaciones para optimizar el sistema:
+
+1.  **Reducir la Variabilidad del Tiempo de Servicio para Disminuir el Tiempo de Espera Máximo:**
+    *   **Recomendación:** Implementar mejoras en los procesos de ensamble o en la capacitación del personal para estandarizar y reducir la variabilidad del `tiempo_servicio_medio_min`. Aunque el promedio es 5.0 minutos, la alta variabilidad es la principal causa del `tiempo_espera_maximo_min` de 34.75 minutos.
+    *   **Cuantificación:** Si se logra reducir la desviación estándar del tiempo de servicio en un **20%**, manteniendo el mismo promedio, se esperaría una reducción del **10-15%** en el `tiempo_espera_promedio_min` y una reducción más significativa (potencialmente del **20-30%**) en el `tiempo_espera_maximo_min`. Esto podría llevar el tiempo de espera promedio a aproximadamente **7.10 minutos** y el tiempo de espera máximo a **27.80 minutos**, mejorando la consistencia del servicio al cliente.
+
+2.  **Optimizar el Tamaño del Lote de Reabastecimiento para Reducir el Capital Inmovilizado y el Tiempo de Ciclo de Lote:**
+    *   **Recomendación:** Evaluar la posibilidad de reducir el `tamano_lote` de 50 unidades a un valor menor, por ejemplo, **30 unidades**, manteniendo el `umbral_inventario` en 10. Esto permitiría un reabastecimiento más frecuente pero con menor cantidad de stock inmovilizado.
+    *   **Cuantificación:** Al reducir el tamaño del lote a 30, el `lotes_solicitados` aumentaría, pero el `tiempo_promedio_despacho_lote_min` (actualmente 293.47 min) podría reducirse en un **40%** (a aproximadamente **176 minutos**) si el tiempo de despacho está relacionado con el tamaño del lote. Esto liberaría capital inmovilizado en inventario y permitiría una mayor agilidad en la gestión de stock, sin comprometer la `disponibilidad_stock_pct` del 100%, dado el `tiempo_entrega_proveedor_min` de 15.0 minutos.
+
+3.  **Implementar un Segundo Punto de Ensamble (Estación de Trabajo) para Aumentar la Capacidad y Reducir Tiempos de Espera:**
+    *   **Recomendación:** Dada la `utilizacion_estacion_pct` del 77.14%, el sistema está operando a una carga considerable. Para absorber futuros aumentos de demanda o reducir drásticamente los tiempos de espera, se recomienda añadir una segunda estación de ensamble.
+    *   **Cuantificación:** La adición de una segunda estación de ensamble, asumiendo una distribución equitativa de la carga, reduciría la utilización de cada estación a aproximadamente **38.57%**. Esto, según la teoría de colas (modelos M/M/c), resultaría en una reducción drástica del `tiempo_espera_promedio_min` en al menos un **60-70%**, llevándolo a aproximadamente **2.37 - 3.16 minutos**. El `tiempo_espera_maximo_min` también se reduciría significativamente, mejorando la experiencia del cliente y la capacidad de respuesta general del sistema.
+
+Estas recomendaciones buscan optimizar el rendimiento del sistema, equilibrando la eficiencia operativa con la calidad del servicio al cliente, y preparándolo para posibles escenarios de mayor demanda o variabilidad.
+
+
+================================================================================
+  FIN DEL REPORTE OFICIAL DE SIMULACIÓN - UJAP PARCIAL III
+================================================================================

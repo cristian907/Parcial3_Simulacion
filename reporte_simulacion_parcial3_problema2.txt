@@ -1,0 +1,151 @@
+================================================================================
+  UNIVERSIDAD JOSÉ ANTONIO PÁEZ (UJAP)
+  FACULTAD DE INGENIERÍA - ESCUELA DE INGENIERÍA EN COMPUTACIÓN
+  PARCIAL III: SIMULACIÓN - TRABAJO PRÁCTICO (POO & INTELIGENCIA ARTIFICIAL)
+================================================================================
+ Fecha y Hora de Generación: 11/09/2026 20:18:17
+ Módulo Evaluado: Simulación Continua: Clúster Térmico de Servidores
+ Archivo Destino: reporte_simulacion_parcial3.txt
+================================================================================
+
+--------------------------------------------------------------------------------
+1. RESUMEN DE PARÁMETROS Y CONFIGURACIÓN INICIAL
+--------------------------------------------------------------------------------
+  * Problema                           : Simulación Continua (Clúster de Servidores Térmico)
+  * Duracion horas                     : Infinito
+  * Tiempo simulado horas              : 1.5
+  * Tiempo simulado segundos           : 5403.2
+  * Trafico medio nominal gbps         : 3.0
+  * Trafico desv std gbps              : 1.0
+  * Rango trafico gbps                 : [1.0, 5.0]
+  * Temperatura diseno c               : 70.0
+  * Temperatura ambiente c             : 25.0
+  * Total datos recibidos tb           : 2.016
+  * Total datos procesados tb          : 1.783
+  * Eficiencia global pct              : 88.42
+  * Temperatura promedio c             : 69.78
+  * Variabilidad temperatura std c     : 1.4
+  * Temperatura minima c               : 65.46
+  * Temperatura maxima c               : 72.8
+  * Tiempo en throttling horas         : 0.654
+  * Porcentaje tiempo throttling       : 43.59
+  * Estabilidad termica                : ESTABLE (Acotado)
+  * Diagnostico viabilidad             : PRECARIA: Frecuente degradación por estrangulamiento térmico. Rendimiento penalizado severamente.
+  * Total trazas registradas           : 90
+
+--------------------------------------------------------------------------------
+2. MUESTRA CRONOLÓGICA DE TRAZAS DEL SISTEMA (EVENTOS / MUESTREOS REGISTRADOS)
+--------------------------------------------------------------------------------
+  [Mostrando primeras 25 trazas de un total de 90 registradas]
+  [00:00:00] | Tráfico: 3.00 Gbps | Temp: 70.00°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.70 Gbps | Total:   0.00 TB
+  [00:01:00] | Tráfico: 3.08 Gbps | Temp: 70.60°C [ALERTA: THROTTLING] | Efic:  87.9% | Throughput: 2.70 Gbps | Total:   0.02 TB
+  [00:02:01] | Tráfico: 2.86 Gbps | Temp: 68.69°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.58 Gbps | Total:   0.04 TB
+  [00:03:01] | Tráfico: 3.08 Gbps | Temp: 69.86°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.77 Gbps | Total:   0.06 TB
+  [00:04:02] | Tráfico: 2.84 Gbps | Temp: 68.76°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.56 Gbps | Total:   0.08 TB
+  [00:05:03] | Tráfico: 3.49 Gbps | Temp: 70.89°C [ALERTA: THROTTLING] | Efic:  86.9% | Throughput: 3.04 Gbps | Total:   0.10 TB
+  [00:06:03] | Tráfico: 2.86 Gbps | Temp: 71.46°C [ALERTA: THROTTLING] | Efic:  84.9% | Throughput: 2.42 Gbps | Total:   0.12 TB
+  [00:07:04] | Tráfico: 3.07 Gbps | Temp: 69.01°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.76 Gbps | Total:   0.14 TB
+  [00:08:05] | Tráfico: 2.77 Gbps | Temp: 69.57°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.49 Gbps | Total:   0.16 TB
+  [00:09:06] | Tráfico: 2.72 Gbps | Temp: 69.16°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.45 Gbps | Total:   0.18 TB
+  [00:10:06] | Tráfico: 2.82 Gbps | Temp: 68.40°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.54 Gbps | Total:   0.20 TB
+  [00:11:07] | Tráfico: 2.72 Gbps | Temp: 68.71°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.45 Gbps | Total:   0.22 TB
+  [00:12:07] | Tráfico: 3.47 Gbps | Temp: 69.32°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 3.12 Gbps | Total:   0.24 TB
+  [00:13:08] | Tráfico: 2.65 Gbps | Temp: 69.68°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.38 Gbps | Total:   0.26 TB
+  [00:14:09] | Tráfico: 2.44 Gbps | Temp: 68.53°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.20 Gbps | Total:   0.28 TB
+  [00:15:09] | Tráfico: 2.80 Gbps | Temp: 70.19°C [ALERTA: THROTTLING] | Efic:  89.4% | Throughput: 2.50 Gbps | Total:   0.30 TB
+  [00:16:10] | Tráfico: 2.82 Gbps | Temp: 70.88°C [ALERTA: THROTTLING] | Efic:  86.9% | Throughput: 2.45 Gbps | Total:   0.32 TB
+  [00:17:10] | Tráfico: 3.09 Gbps | Temp: 70.47°C [ALERTA: THROTTLING] | Efic:  88.4% | Throughput: 2.73 Gbps | Total:   0.34 TB
+  [00:18:11] | Tráfico: 2.78 Gbps | Temp: 70.96°C [ALERTA: THROTTLING] | Efic:  86.6% | Throughput: 2.40 Gbps | Total:   0.36 TB
+  [00:19:12] | Tráfico: 2.88 Gbps | Temp: 69.48°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.59 Gbps | Total:   0.38 TB
+  [00:20:12] | Tráfico: 3.15 Gbps | Temp: 69.65°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.83 Gbps | Total:   0.40 TB
+  [00:21:13] | Tráfico: 2.63 Gbps | Temp: 68.37°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.37 Gbps | Total:   0.42 TB
+  [00:22:14] | Tráfico: 2.80 Gbps | Temp: 70.09°C [ALERTA: THROTTLING] | Efic:  89.7% | Throughput: 2.51 Gbps | Total:   0.44 TB
+  [00:23:15] | Tráfico: 3.32 Gbps | Temp: 71.25°C [ALERTA: THROTTLING] | Efic:  85.6% | Throughput: 2.84 Gbps | Total:   0.46 TB
+  [00:24:15] | Tráfico: 2.61 Gbps | Temp: 69.35°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.35 Gbps | Total:   0.48 TB
+
+  ... [40 trazas intermedias omitidas en el reporte impreso] ...
+
+  [Mostrando últimas 25 trazas registradas]
+  [01:05:41] | Tráfico: 2.94 Gbps | Temp: 69.10°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.65 Gbps | Total:   1.30 TB
+  [01:06:42] | Tráfico: 2.81 Gbps | Temp: 69.88°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.52 Gbps | Total:   1.32 TB
+  [01:07:42] | Tráfico: 3.40 Gbps | Temp: 72.14°C [ALERTA: THROTTLING] | Efic:  82.5% | Throughput: 2.81 Gbps | Total:   1.34 TB
+  [01:08:43] | Tráfico: 2.95 Gbps | Temp: 70.98°C [ALERTA: THROTTLING] | Efic:  86.6% | Throughput: 2.55 Gbps | Total:   1.36 TB
+  [01:09:44] | Tráfico: 2.65 Gbps | Temp: 69.24°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.38 Gbps | Total:   1.38 TB
+  [01:10:44] | Tráfico: 3.16 Gbps | Temp: 68.83°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.84 Gbps | Total:   1.40 TB
+  [01:11:45] | Tráfico: 3.14 Gbps | Temp: 70.20°C [ALERTA: THROTTLING] | Efic:  89.3% | Throughput: 2.80 Gbps | Total:   1.42 TB
+  [01:12:46] | Tráfico: 2.91 Gbps | Temp: 69.48°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.61 Gbps | Total:   1.44 TB
+  [01:13:47] | Tráfico: 3.31 Gbps | Temp: 72.09°C [ALERTA: THROTTLING] | Efic:  82.7% | Throughput: 2.74 Gbps | Total:   1.46 TB
+  [01:14:47] | Tráfico: 3.06 Gbps | Temp: 69.28°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.75 Gbps | Total:   1.48 TB
+  [01:15:48] | Tráfico: 2.91 Gbps | Temp: 69.40°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.62 Gbps | Total:   1.50 TB
+  [01:16:49] | Tráfico: 2.92 Gbps | Temp: 69.32°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.63 Gbps | Total:   1.52 TB
+  [01:17:49] | Tráfico: 2.87 Gbps | Temp: 67.03°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.58 Gbps | Total:   1.54 TB
+  [01:18:50] | Tráfico: 3.10 Gbps | Temp: 68.53°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.79 Gbps | Total:   1.56 TB
+  [01:19:51] | Tráfico: 2.87 Gbps | Temp: 69.25°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.58 Gbps | Total:   1.58 TB
+  [01:20:52] | Tráfico: 2.96 Gbps | Temp: 67.59°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.66 Gbps | Total:   1.60 TB
+  [01:21:52] | Tráfico: 3.36 Gbps | Temp: 69.95°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 3.02 Gbps | Total:   1.62 TB
+  [01:22:53] | Tráfico: 3.06 Gbps | Temp: 69.62°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.76 Gbps | Total:   1.64 TB
+  [01:23:54] | Tráfico: 3.01 Gbps | Temp: 69.38°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.71 Gbps | Total:   1.66 TB
+  [01:24:54] | Tráfico: 3.54 Gbps | Temp: 71.18°C [ALERTA: THROTTLING] | Efic:  85.9% | Throughput: 3.04 Gbps | Total:   1.68 TB
+  [01:25:55] | Tráfico: 3.46 Gbps | Temp: 72.26°C [ALERTA: THROTTLING] | Efic:  82.1% | Throughput: 2.84 Gbps | Total:   1.70 TB
+  [01:26:56] | Tráfico: 2.97 Gbps | Temp: 71.48°C [ALERTA: THROTTLING] | Efic:  84.8% | Throughput: 2.52 Gbps | Total:   1.72 TB
+  [01:27:56] | Tráfico: 2.95 Gbps | Temp: 70.71°C [ALERTA: THROTTLING] | Efic:  87.5% | Throughput: 2.58 Gbps | Total:   1.74 TB
+  [01:28:57] | Tráfico: 3.06 Gbps | Temp: 69.17°C [NORMAL (Estable)  ] | Efic:  90.0% | Throughput: 2.75 Gbps | Total:   1.76 TB
+  [01:29:58] | Tráfico: 3.33 Gbps | Temp: 71.29°C [ALERTA: THROTTLING] | Efic:  85.5% | Throughput: 2.84 Gbps | Total:   1.78 TB
+
+--------------------------------------------------------------------------------
+3. ANÁLISIS, CONCLUSIÓN Y RECOMENDACIONES DE INTELIGENCIA ARTIFICIAL
+--------------------------------------------------------------------------------
+======================================================================
+DICTAMEN DE INTELIGENCIA ARTIFICIAL (GOOGLE GEMINI - gemini-2.5-flash)
+======================================================================
+
+Estimados colegas y estudiantes de la UJAP,
+
+Procedo a realizar un análisis cuantitativo riguroso de los resultados de la simulación del "Clúster Térmico de Servidores", aplicando los principios de la Simulación de Sistemas y la Ingeniería en Computación.
+
+---
+
+### Análisis Cuantitativo de la Simulación Continua: Clúster Térmico de Servidores
+
+**1. Conclusión General del Desempeño:**
+
+El sistema simulado presenta una **estabilidad térmica acotada**, lo cual es un punto positivo en cuanto a la no divergencia de la temperatura. Sin embargo, la viabilidad operativa se clasifica como **PRECARIA**, debido a una **frecuente degradación por estrangulamiento térmico (throttling)** que penaliza severamente el rendimiento.
+
+El clúster opera con una **eficiencia global del 88.42%**, lo que a primera vista podría parecer aceptable. No obstante, esta eficiencia se ve comprometida por un **43.59% del tiempo en estado de throttling**. Esto significa que casi la mitad del tiempo de operación simulado, el sistema no está entregando su rendimiento nominal debido a limitaciones térmicas. El **total de datos procesados (1.783 TB)** es significativamente inferior al **total de datos recibidos (2.016 TB)**, lo que corrobora la penalización en el throughput y la capacidad efectiva del sistema.
+
+El principal cuello de botella es, sin lugar a dudas, la **gestión térmica**. A pesar de que la **temperatura promedio (69.78°C)** está ligeramente por debajo de la **temperatura de diseño (70.0°C)**, la **temperatura máxima alcanzada (72.8°C)** y la **variabilidad de la temperatura (desviación estándar de 1.4°C)** indican que el sistema opera constantemente al límite o por encima de su umbral térmico de diseño. Esto desencadena el mecanismo de throttling, que si bien protege el hardware, degrada drásticamente el rendimiento.
+
+**2. Análisis Crítico:**
+
+*   **Tiempos de Espera / Throttling:** El **0.654 horas (43.59%)** de tiempo en throttling es el indicador más crítico. Este fenómeno se activa cuando la temperatura supera un umbral predefinido, que en este caso parece estar muy cercano o incluso por debajo de la temperatura de diseño de 70.0°C, como se observa en las trazas. Por ejemplo, en el minuto 00:01:00, con un tráfico de 3.08 Gbps y una temperatura de 70.60°C, el sistema entra en throttling, reduciendo la eficiencia al 87.9% y manteniendo el throughput en 2.70 Gbps (inferior al 90% de 3.08 Gbps). Esto sugiere que el umbral de throttling es muy sensible o que la capacidad de disipación térmica es insuficiente para el tráfico medio nominal. La alta frecuencia de throttling indica que el sistema no puede sostener el **tráfico medio nominal de 3.0 Gbps** de manera consistente sin sobrepasar los límites térmicos.
+
+*   **Temperatura:** La **temperatura promedio de 69.78°C** es alarmantemente cercana a la **temperatura de diseño de 70.0°C**. La **temperatura máxima de 72.8°C** demuestra que el sistema excede regularmente su límite operativo seguro. La **variabilidad de 1.4°C** indica fluctuaciones significativas que, aunque no extremas, son suficientes para cruzar el umbral de throttling con frecuencia. La **temperatura ambiente de 25.0°C** proporciona un diferencial de 45°C con la temperatura de diseño, lo que sugiere que el sistema de enfriamiento actual no es lo suficientemente robusto para manejar la carga térmica generada por el tráfico de datos. Las trazas muestran cómo pequeños incrementos en el tráfico (ej. 3.49 Gbps en 00:05:03) o incluso tráfico moderado con temperaturas ya elevadas (ej. 2.86 Gbps con 71.46°C en 00:06:03) disparan el throttling.
+
+*   **Inventario (Datos):** El diferencial entre **datos recibidos (2.016 TB)** y **datos procesados (1.783 TB)**, que es de **0.233 TB**, representa una acumulación de datos no procesados o una pérdida de capacidad efectiva. Esto es una consecuencia directa del throttling, que reduce el throughput y, por ende, la capacidad de procesamiento del clúster. La eficiencia global del 88.42% es un reflejo de esta discrepancia, indicando que aproximadamente el 11.58% de la capacidad potencial de procesamiento se pierde debido a ineficiencias, principalmente térmicas.
+
+*   **Parámetros de Tráfico:** El **tráfico medio nominal de 3.0 Gbps** con una **desviación estándar de 1.0 Gbps** y un **rango de [1.0, 5.0] Gbps** indica una carga de trabajo variable. Cuando el tráfico se acerca al límite superior del rango (ej. 3.49 Gbps), la probabilidad de throttling aumenta drásticamente. El sistema parece estar diseñado para un tráfico medio, pero carece de la holgura térmica necesaria para manejar las fluctuaciones normales de la carga de trabajo sin incurrir en penalizaciones de rendimiento.
+
+**3. Tres (3) Recomendaciones Automatizadas Puntuales y Cuantificadas para Optimizar el Sistema:**
+
+Para abordar la precaria viabilidad operativa y el severo impacto del throttling, propongo las siguientes recomendaciones, enfocadas en la gestión térmica y la adaptación de la carga:
+
+1.  **Implementar un Sistema de Refrigeración Dinámico con Capacidad Aumentada:**
+    *   **Cuantificación:** Aumentar la capacidad de disipación térmica del sistema en al menos un **15-20%** por encima de la carga térmica generada por el tráfico medio nominal. Esto implicaría un diseño que permita mantener la temperatura promedio por debajo de **65°C** (un margen de seguridad de 5°C respecto a la temperatura de diseño de 70°C) incluso bajo picos de tráfico de hasta 4.0 Gbps.
+    *   **Automatización:** Desarrollar un controlador de enfriamiento predictivo que ajuste proactivamente la velocidad de los ventiladores o la potencia de los sistemas de refrigeración líquida basándose no solo en la temperatura actual, sino también en la **tasa de cambio de temperatura (derivada temporal)** y en la **predicción de tráfico entrante** (utilizando modelos de series temporales o aprendizaje automático sobre el tráfico histórico). Esto permitiría anticipar los picos de temperatura antes de que se alcance el umbral de throttling.
+
+2.  **Implementar un Algoritmo de Balanceo de Carga Adaptativo con Conciencia Térmica:**
+    *   **Cuantificación:** Reducir el porcentaje de tiempo en throttling a menos del **5%**. Para lograr esto, el algoritmo debería ser capaz de desviar el tráfico de los servidores que superen los **68°C** (un umbral preventivo 2°C por debajo de la temperatura de diseño) hacia servidores con menor carga térmica, o incluso a un clúster de respaldo si la capacidad lo permite.
+    *   **Automatización:** Diseñar un balanceador de carga inteligente que, además de las métricas tradicionales (CPU, memoria, red), incorpore la **temperatura actual y proyectada** de cada servidor. Cuando un servidor se acerque al umbral de 68°C, el balanceador debería reducir gradualmente la asignación de nuevas conexiones o tareas a ese servidor, redistribuyéndolas a otros nodos más fríos. En escenarios de alta carga térmica generalizada, podría activar un modo de "reducción de servicio" o "desvío a clúster secundario" para evitar el throttling masivo.
+
+3.  **Optimización del Umbral de Throttling y Gestión de Frecuencia Dinámica (DVFS):**
+    *   **Cuantificación:** Reevaluar el umbral de throttling para que se active a **70.0°C** (la temperatura de diseño), pero que la reducción de rendimiento sea más granular y menos abrupta. En lugar de una caída drástica de eficiencia, implementar un sistema de **Dynamic Voltage and Frequency Scaling (DVFS)** que reduzca la frecuencia de los procesadores en pasos pequeños (ej. 5% de reducción de frecuencia por cada 0.5°C por encima de 70.0°C, hasta un máximo de 15% de reducción) antes de aplicar un throttling más severo.
+    *   **Automatización:** Configurar el firmware y el sistema operativo para que, al alcanzar los 70.0°C, se inicie una reducción controlada de la frecuencia de la CPU y/o GPU. Esto permitiría mantener una eficiencia superior al **85%** incluso en condiciones de estrés térmico moderado, minimizando el impacto en el throughput. El sistema debería monitorear continuamente la temperatura y ajustar dinámicamente la frecuencia para operar lo más cerca posible del rendimiento nominal sin exceder los límites térmicos críticos.
+
+---
+
+Estas recomendaciones, al ser implementadas de forma integrada, permitirán al clúster operar de manera más eficiente y robusta, mitigando los efectos perjudiciales del throttling y mejorando la viabilidad operativa a largo plazo. La clave reside en pasar de una gestión reactiva a una **gestión proactiva y predictiva** de la carga térmica y de trabajo.
+
+
+================================================================================
+  FIN DEL REPORTE OFICIAL DE SIMULACIÓN - UJAP PARCIAL III
+================================================================================
